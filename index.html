@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" />
 </head>
+
 <body>
-    <div class="corpo">
-  <h1>Sign in</h1>
-    <div class="login">
-        <h2 class="h2username" onclick="aumentaInput()">Username</h2>
-        <input type="text" id="usuario">
+    <div class="body" onclick="noValue()">
+    <div class="corpo" >
+        <div class="conteudo">
+            <h1>Sign in</h1>
+            <div class="login">
+                <label class="h2username" id="labelzola">Username</h2>
+                    <input class="input" type="text" id="usuario">
+            </div>
+            <div class="login">
+                <label class="h2password">Password</h2>
+                    <input class="input" type="password" id="senha">
+            </div>
+            <div class="forgotpassword">
+                <p>Forgot Password?</p>
+            </div>
+            <div class="signup">
+                <p>Signup</p>
+            </div>
+            <button>Login</button>
+        </div>
     </div>
-    <div class="login">
-        <h2 class="h2password" onclick="aumentaInputSegundo()" >Password</h2>
-        <input type="password" id="senha">
     </div>
-    <div class="forgotpassword">
-        <p>Forgot Password?</p>
-    </div>
-    <div class="signup">
-        <p>Signup</p>
-    </div>
-    <button class="login">Login</button>
-</div>
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>

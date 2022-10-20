@@ -18,7 +18,40 @@ body{
     margin-top: 100px;
     position: relative;
     padding: 30px;
+    overflow: hidden;
 }
+.corpo::before{
+    content: '';
+    position: absolute;
+    width: 140px;
+    height: 200%;
+    margin-top: -200px;
+    background-color: rgb(28, 211, 211);
+    animation: animate 5s linear infinite;
+    margin-left: 100px;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.corpo::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.conteudo{
+    position: relative;
+    z-index: 10;
+}
+
 
 div{
     display: block;
@@ -27,12 +60,13 @@ h1{
     text-align: center;
     color: rgb(28, 211, 211);
 }
-h2{
+label{
     display: inline-block;
     font-size: 24px;
     color: rgb(104, 104, 104);
+    transition: 1s;
 }
-#usuario, #senha{
+.input{
     height: 1px;
     width: 300px;
     max-width: 80%;
@@ -70,4 +104,19 @@ button{
     color: rgb(28, 211, 211);
     margin-left: 100px;
     font-size: 12px;
+}
+
+/*.h2username:focus-within, .h2password:focus-within{
+    color: rgb(28, 211, 211);
+    font-size: 14px;
+}
+*/
+.login:focus-within .input{
+    height: 20px;
+    transition: 1s;
+}
+.login:focus-within .h2username, .login:focus-within .h2password{
+    color: rgb(28, 211, 211);
+    font-size: 15px;
+    transition: 1s;
 }
